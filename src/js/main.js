@@ -8,7 +8,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//marker([Y-ACHSE, X-ACHSE])
+//setzt marker([Y-ACHSE, X-ACHSE]) auf er Karte
 function setMaker(){
 
     let circle = L.circle([0, 0],{
@@ -28,6 +28,7 @@ function setMaker(){
     } );
 }
 
+//Holt API DATen und setzt dei Internationale Raumstation auf die Karte drauf
 async function where(){
     const url = 'https://api.wheretheiss.at/v1/satellites/25544';
     const response = await fetch(url);
